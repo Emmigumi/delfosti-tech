@@ -11,26 +11,28 @@
 
 <body>
 
-<div>
-    <input type="search" id="searchInput" name="searchInput">
-    <button type="button" class="btn btn-info" id="sort">Orden por nombre</button>
-</div>
+<nav>
+    <input type="search" id="searchInput" name="searchInput" class="col-sm-6">
+    <button type="button" class="btn btn-info col-sm-4" id="sort">SortName</button>
+</nav>
 
-    <div class="container-table shadow-lg p3 mb-5 bg-body rounded">
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Slug</th>
-                  </tr>
-            </thead>
-            <tbody id="data-products">
-            </tbody>
-          </table>
+    <div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Slug</th>
+                      </tr>
+                </thead>
+                <tbody id="data-products">
+                </tbody>
+              </table>
+        </div>
     </div>
 
-    <div class="d-grid gap-2 d-md-block">
+    <div class="gap-2 btn-container">
         <button class="btn btn-primary" type="button" id="prev">Prev</button>
         <p id="contador">1</p>
         <button class="btn btn-success" type="button" id="next">Next</button>

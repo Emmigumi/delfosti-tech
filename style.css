@@ -14,3 +14,35 @@ background: blueviolet;
 .filter{
     display: none;
 }
+
+/* encabezado */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20%;
+    width: 70%;
+    margin:2% 10% 2% 10%;
+}
+#searchInput{
+    border-radius: 1rem;
+    border-color: blue;   
+}
+#sort{
+    border-radius: 2rem;
+}
+/* tabla */
+/* .container-table{
+    margin:auto;
+    text-align: center;
+} */
+.table-responsive{
+    width: 80%;
+    margin:0% 10% 0% 10%;
+}
+/* contenerdor de botones */
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

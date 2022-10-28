@@ -54,10 +54,10 @@ btnSortName.addEventListener('click', e=>{
 const getProducts = (data) => {
     let body = '';
     for (let i=0; i<data.length; i++){
-        body += `<tr class="row-list">
+        body += `<tr>
         <th class="product">${data[i].id}</th>
         <td class="product">${data[i].name}</td>
-        <th class="product">${data[i].slug}</th>
+        <th class="product" ><img src="${data[i].slug}" alt="100" width="100"></th>
       </tr>
       `
     }
