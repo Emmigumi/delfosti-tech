@@ -22,3 +22,6 @@ export const products = [
     [{id:19, name:'Kentucky Chicken Sandwich Deluxe', slug:'https://www.kfc.com.pe/Content/OnlineOrderingImages/Menu/Items/lg2x/CAT1-208-11984.jpg?v=1.1'}],
     [{id:20, name:'Papa Familiar', slug:'https://www.kfc.com.pe/Content/OnlineOrderingImages/Menu/Items/lg2x/CAT1-12-437.jpg'}],
 ]
+
+
+// let url = 'http://localhost:3000/products?_page=1&_limit=5';

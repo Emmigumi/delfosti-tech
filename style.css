@@ -10,3 +10,7 @@ table thead{
 .product:hover{
 background: blueviolet;
 }
+
+.filter{
+    display: none;
+}

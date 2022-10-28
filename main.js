@@ -1,37 +1,56 @@
-let productSearch = [];
+//referenciar a elementos del DOM
+//tabla
+const dataProducts = document.getElementById('data-products');
+const productList =  document.getElementsByTagName('td');
+//Botones de paginación
+const btnConteiner = document.getElementsByClassName('buttons');
+// buscador
+const inputSearch = document.querySelector('#searchInput');
+const trList = document.getElementsByTagName("tr");
+
+
 window.addEventListener('DOMContentLoaded', () => {
-   document.getElementById('dataProducts').innerHTML = "<h1>Loading</h1>"
-loadProducts();
+    dataProducts.innerHTML = "<h1>Loading</h1>";
+    loaderProducts();
 }) 
+
 const getProducts = (data) => {
     let body = '';
     for (let i=0; i<data.length; i++){
-        body += ` <tr>
-        <th class="product" scope="row">${data[i].id}</th>
+        body += `<tr class="tr-list">
+        <th class="product">${data[i].id}</th>
         <td class="product">${data[i].name}</td>
-        <td class="product">${data[i].slug}</td>
-      </tr>`
+        <th class="product">${data[i].slug}</th>
+      </tr>
+      `
     }
-    document.getElementById('dataProducts').innerHTML = body
-    productSearch = data;
+    dataProducts.innerHTML = body
 }
 
-
- function loadProducts(){
+function loaderProducts(){
     let url = 'http://localhost:3000/products';
     fetch(url)
     .then(response=> response.json())
     .then(data => getProducts(data))
-    .catch(error => console.log(error))
-} 
-
-// Obtener el valor del inputSearch
-
-const input = document.querySelector('#searchInput')
-input.addEventListener('keyup', e => {
-    const newProductsList = productSearch.filter(product => product.name.toLowerCase().includes(input.value.toLowerCase()))
-    console.log('soy newproductList', newProductsList)
-    getProducts(newProductsList);
+    .catch(error => console.log(error));
+}
+//Evento keyup que filtra a partir de la 4 letra de cada fila: nombre
+inputSearch.addEventListener('keyup', e => {
+    let inputTextValue = e.target.value;
+    console.log(inputTextValue)
+    let er = new RegExp(inputTextValue, "i")
+    for (let j = 1; j<trList.length; j++){
+        let valorTr = trList[j];
+   //     console.log('soy trL[j]', valorTr.children[1].innerText)
+        if(er.test(valorTr.children[1].innerText)&&inputTextValue.length>3){
+            valorTr.classList.remove('filter')
+        } else {
+            valorTr.classList.add('filter')
+        }
+    }       
 })
 
+//paginación
+//Botones
+//btnConteiner
 
