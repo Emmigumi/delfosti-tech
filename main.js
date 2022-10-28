@@ -78,7 +78,7 @@ inputSearch.addEventListener('keyup', e => {
     for (let j = 1; j<rowList.length; j++){
         let valorTr = rowList[j];
    //     console.log(valorTr.children[1].innerText)
-        if(er.test(valorTr.children[1].innerText)&&inputTextValue.length>3){
+        if(er.test(valorTr.children[1].innerText)){
             valorTr.classList.remove('filter')
         } else {
             valorTr.classList.add('filter')
