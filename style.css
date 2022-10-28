@@ -1,0 +1,12 @@
+body{
+    background-color: cornflowerblue;
+    color: white;
+}
+table thead{
+    background-color: blue;
+    color: white;
+}
+
+.product:hover{
+background: blueviolet;
+}
