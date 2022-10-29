@@ -32,13 +32,10 @@ nav{
     border-radius: 2rem;
 }
 /* tabla */
-/* .container-table{
-    margin:auto;
-    text-align: center;
-} */
 .table-responsive{
     width: 80%;
     margin:0% 10% 0% 10%;
+    text-align: center;
 }
 /* contenerdor de botones */
 .btn-container{
