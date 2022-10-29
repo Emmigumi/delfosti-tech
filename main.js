@@ -13,7 +13,7 @@ const btnSortName = document.getElementById('sort');
 const inputSearch = document.querySelector('#searchInput');
 const rowList = document.getElementsByTagName("tr");
 //link de API
- let url = 'http://localhost:3000/products?_page=1&_limit=5';
+ let url = 'https://db-delfosti-reto-tech.herokuapp.com/products?_page=1&_limit=5';
 
 window.addEventListener('DOMContentLoaded', () => {
     dataProducts.innerHTML = "<h1>Loading</h1>";
@@ -28,7 +28,7 @@ btnNext.addEventListener('click', e=>{
     } else{
         count++;  
         contador.innerHTML = count;
-       let url = `http://localhost:3000/products?_page=${count}&_limit=5`;
+       let url = `https://db-delfosti-reto-tech.herokuapp.com/products?_page=${count}&_limit=5`;
        loaderProducts(url);
        console.log(url);
     }
@@ -40,14 +40,14 @@ btnPrev.addEventListener('click', e=>{
    } else{
     count--;
     contador.innerHTML = count;
-    let url = `http://localhost:3000/products?_page=${count}&_limit=5`;
+    let url = `https://db-delfosti-reto-tech.herokuapp.com/products?_page=${count}&_limit=5`;
     loaderProducts(url);
    }
 })
 
 //Funcionalidad de ordenamiento por nombre
 btnSortName.addEventListener('click', e=>{
-    let url = `http://localhost:3000/products?_page=${count}&_sort=name&_limit=5`;
+    let url = `https://db-delfosti-reto-tech.herokuapp.com/products?_page=${count}&_sort=name&_limit=5`;
     loaderProducts(url);
 })
 
