@@ -10,11 +10,11 @@
         },
         {"id":3, 
         "name":"Sandwich de jamón y queso", 
-        "slug":"https://github.com/Laboratoria/bootcamp/tree/main/projects/04-burger-queen-api/resources/images/sandwich.jpg"
+        "slug":"https://okdiario.com/img/2019/01/21/receta-de-sandwinch-de-jamon-y-queso-con-mostaza.jpg"
         },
         {"id":4, 
         "name":"Café américano", 
-        "slug":"https://github.com/Laboratoria/bootcamp/tree/main/projects/04-burger-queen-api/resources/images/coffe.jpg"
+        "slug":"http://assets.stickpng.com/images/580b57fbd9996e24bc43c0e8.png"
         }, 
         {"id":5, 
         "name":"Papas fritas", 
